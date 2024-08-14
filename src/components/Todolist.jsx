@@ -1,6 +1,6 @@
 import React from "react";
 
-function Todolist({ todo, setTodo }) {
+function Todolist({ todo, setTodo,activeTodos}) {
 
   const handleDelete = (index) => {
     const todoCopy = [...todo];
@@ -12,6 +12,7 @@ function Todolist({ todo, setTodo }) {
     todoCopy[index].isCompleted = !todoCopy[index].isCompleted;
     setTodo(todoCopy);
   }
+
   return (
     <ul className="todo-list">
       {todo.map((item, index) => (
